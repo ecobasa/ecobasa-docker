@@ -14,8 +14,8 @@ services:
       - ./postgres.env
     networks:
       - backend
-    #logging:
-    #  driver: none
+    logging:
+      driver: none
   django:
     build: .
     volumes:
@@ -42,5 +42,5 @@ services:
     networks:
       - backend
       - frontend-web
-    #logging:
-    #  driver: none
+    logging:
+      driver: none
