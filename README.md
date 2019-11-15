@@ -29,7 +29,7 @@ docker-compose run --rm django ./manage.py collectstatic --noinput
 docker-compose run --rm django ./manage.py syncdb
 docker-compose run --rm django ./manage.py migrate
 docker-compose stop django && docker-compose rm -f django && docker-compose up -d django
-docker-compose exec django ./manage.py compilemessages
+docker exec -w /opt/services/ecobasa/ecobasa/ ecobasaorg_django_1 django-admin.py compilemessages
 ```
 
 ## Licence
