@@ -19,7 +19,7 @@ services:
   django:
     build: .
     volumes:
-    #  - ./src/:/opt/services/ecobasa/
+      - ./src/:/opt/services/ecobasa/
       - ./settings.py:/opt/services/ecobasa/ecobasa/settings.py
     depends_on:
       - database
