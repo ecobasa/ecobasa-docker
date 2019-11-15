@@ -2,6 +2,7 @@
 FROM python:2.7
 
 # arbitrary location choice: you can change the directory
+RUN mkdir -p /opt/services/ecobasa
 WORKDIR /opt/services/ecobasa
 
 # install our dependencies
