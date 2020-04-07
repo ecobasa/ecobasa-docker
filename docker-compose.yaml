@@ -23,8 +23,6 @@ services:
     volumes:
     #  - ./src/:/opt/services/ecobasa/
       - ./media:/opt/services/ecobasa/media
-      - ./locale/django.de.mo:/opt/services/ecobasa/ecobasa/locale/de/LC_MESSAGES/django.mo
-      - ./locale/django.es.mo:/opt/services/ecobasa/ecobasa/locale/es/LC_MESSAGES/django.mo
       - ./static-collected:/opt/services/ecobasa/static-collected
       - ./whoosh_index:/opt/services/ecobasa/whoosh_index
       - ./settings.py:/opt/services/ecobasa/ecobasa/settings.py

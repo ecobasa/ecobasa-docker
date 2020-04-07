@@ -15,8 +15,8 @@ This is a Docker Compose wrapper for the Ecobasa.org code resident in
 ```
 docker-compose run --rm django ./manage.py syncdb --noinput
 docker-compose run --rm django ./manage.py migrate
-docker-compose run --rm django ./manage.py createsuperuser
 docker-compose run --rm django ./manage.py collectstatic --noinput
+docker-compose run --rm django ./manage.py createsuperuser
 ```
 
 ## Update
@@ -25,11 +25,10 @@ If the sources in `./src` changed, please run this sequence of commands:
 
 ```
 docker-compose build django
-docker-compose run --rm django ./manage.py collectstatic --noinput
 docker-compose run --rm django ./manage.py syncdb
 docker-compose run --rm django ./manage.py migrate
+docker-compose run --rm django ./manage.py collectstatic --noinput
 docker-compose stop django && docker-compose rm -f django && docker-compose up -d django
-docker-compose exec django sh -c 'cd /opt/services/ecobasa/ecobasa/ && /opt/services/ecobasa/manage.py compilemessages'
 ```
 
 ## Licence
