@@ -1,4 +1,9 @@
 *.env
+*.sql
+*.swp
 settings.py
 src/
-*.sql
+media/
+filer_public/
+static-collected/
+whoosh_index/
