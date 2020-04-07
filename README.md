@@ -27,6 +27,7 @@ If the sources in `./src` changed, please run this sequence of commands:
 docker-compose build django
 docker-compose run --rm django ./manage.py syncdb
 docker-compose run --rm django ./manage.py migrate
+rm -rf static-collected/*
 docker-compose run --rm django ./manage.py collectstatic --noinput
 docker-compose stop django && docker-compose rm -f django && docker-compose up -d django
 ```
