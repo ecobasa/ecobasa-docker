@@ -17,7 +17,9 @@ services:
     logging:
       driver: none
   django:
-    build: .
+    build:
+      context: ./src
+      dockerfile: Dockerfile
     volumes:
     #  - ./src/:/opt/services/ecobasa/
       - ./media:/opt/services/ecobasa/media
