@@ -21,7 +21,6 @@ services:
       context: ./src
       dockerfile: Dockerfile
     volumes:
-    #  - ./src/:/opt/services/ecobasa/
       - ./media:/opt/services/ecobasa/media
       - ./static-collected:/opt/services/ecobasa/static-collected
       - ./whoosh_index:/opt/services/ecobasa/whoosh_index
