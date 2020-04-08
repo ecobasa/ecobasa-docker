@@ -1,0 +1,11 @@
+version: '2'
+services:
+  django:
+    build:
+      context: ./src
+      dockerfile: Dockerfile.devel
+    volumes:
+      - ./src:/opt/services/ecobasa
+      - ./settings.devel.py:/opt/services/ecobasa/ecobasa/settings.py
+    ports:
+      - "127.0.0.1:8000:8000"

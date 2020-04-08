@@ -32,6 +32,18 @@ docker-compose run --rm django ./manage.py collectstatic --noinput
 docker-compose stop django && docker-compose rm -f django && docker-compose up -d django
 ```
 
+## Development
+
+You can use docker-compose.devel.yml and settings.devel.py to run a development environment
+and then
+
+```
+docker-compose -f docker-compose.devel.yml build
+docker-compose -f docker-compose.devel.yml up -d
+docker-compose -f docker-compose.devel.yml exec python manage.py syncdb
+docker-compose -f docker-compose.devel.yml exec python manage.py migrate 
+```
+
 ## Licence
 
 (c) 2019 Ecobasa e.V. - WTFPL
