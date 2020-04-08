@@ -38,11 +38,11 @@ You can use docker-compose.devel.yml and settings.devel.py to run a development 
 and then
 
 ```
-docker-compose -f docker-compose.devel.yml build
-docker-compose -f docker-compose.devel.yml run --rm django ./manage.py syncdb
-docker-compose -f docker-compose.devel.yml run --rm django ./manage.py migrate 
-docker-compose -f docker-compose.devel.yml run --rm django sh -c 'cd /opt/services/ecobasa/ecobasa/ && /opt/services/ecobasa/manage.py compilemessages'
-docker-compose -f docker-compose.devel.yml up -d
+docker-compose -f docker-compose.devel.yaml build
+docker-compose -f docker-compose.devel.yaml run --rm django ./manage.py syncdb
+docker-compose -f docker-compose.devel.yaml run --rm django ./manage.py migrate 
+docker-compose -f docker-compose.devel.yaml run --rm django sh -c 'cd /opt/services/ecobasa/ecobasa/ && /opt/services/ecobasa/manage.py compilemessages'
+docker-compose -f docker-compose.devel.yaml up -d
 ```
 
 ## Licence
