@@ -39,9 +39,10 @@ and then
 
 ```
 docker-compose -f docker-compose.devel.yml build
+docker-compose -f docker-compose.devel.yml run --rm django python ./manage.py syncdb
+docker-compose -f docker-compose.devel.yml run --rm django python ./manage.py migrate 
+docker-compose -f docker-compose.devel.yml run --rm django sh -c 'cd /opt/services/ecobasa/ecobasa/ && /opt/services/ecobasa/manage.py compilemessages'
 docker-compose -f docker-compose.devel.yml up -d
-docker-compose -f docker-compose.devel.yml exec python manage.py syncdb
-docker-compose -f docker-compose.devel.yml exec python manage.py migrate 
 ```
 
 ## Licence
